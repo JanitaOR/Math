@@ -12,19 +12,18 @@
         <div>
             <label for="operation">Hva vil du øve deg i?</label>
             <select id="operation">
-                <option value="+">+</option>
-                <option value="-">-</option>
-                <option value="*">*</option>
+                <option value="+">Pluss</option>
+                <option value="-">Minus</option>
+                <option value="*">Gange</option>
             </select>
         </div>
         <div>
-            <label for="difficulty">Vanskelighetsgrad: Hvilke antall siffere vil du bruke?</label>
+            <label for="difficulty">Hvilke vanskelighetsgrad ønsker du?</label>
             <input type="number" id="difficulty" min="1" value="1">
         </div>
         <button onclick="generateProblem()">Start</button>
         <div id="problem"></div>
-        <input type="number" id="answer" placeholder="Skriv svaret her" onkeyup="handleKeyUp(event)"> 
-        <button onclick="checkAnswer()">Sjekk svar</button>
+        <input type="number" id="answer" placeholder="Skriv svaret her" onkeyup="handleKeyUp(event)"> <button onclick="checkAnswer()">Sjekk svar</button>
         <div id="result"></div>
     </div>
     <script src="script.js"></script>
