@@ -27,6 +27,7 @@ function checkAnswer() {
     } else {
         document.getElementById('result').innerText = 'Galt svar. Prøv igjen.';
     }
+    document.getElementById('answer').focus();
 }
 function handleKeyUp(event) { 
     if (event.key === 'Enter') { checkAnswer(); } 
