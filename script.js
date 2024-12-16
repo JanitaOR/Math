@@ -14,7 +14,17 @@ function generateProblem() {
     document.getElementById('result').innerText = '';
 }
 
-function checkAnswer() {
+function checkAnswer(event) { 
+    if (event) { event.preventDefault(); } 
+    const problem = document.getElementById('problem').innerText; 
+    const answer = parseInt(document.getElementById('answer').value); 
+    const correctAnswer = eval(problem); if (answer === correctAnswer) 
+        { document.getElementById('result').innerText = 'Riktig svar! Fortsett til neste.'; generateProblem(); document.getElementById('answer').value = ''; } 
+    else { document.getElementById('result').innerText = 'Galt svar. Prøv igjen.'; } 
+    // Sett fokus tilbake til input-feltet med en liten forsinkelse 
+    setTimeout(() => { document.getElementById('answer').focus(); }, 10);
+}
+    /*function checkAnswer() {
     const problem = document.getElementById('problem').innerText;
     const answer = parseInt(document.getElementById('answer').value);
 
@@ -31,4 +41,4 @@ function checkAnswer() {
 }
 function handleKeyUp(event) { 
     if (event.key === 'Enter') { checkAnswer(); } 
-}
+}*/
